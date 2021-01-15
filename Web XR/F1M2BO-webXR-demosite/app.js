@@ -3,11 +3,16 @@ const controls = new Controls(50);
 controls.enableMovement();
 
 // create a model
+const melkMeisje = new Model('assets/models/vermeer/export_museumprops.babylon.gltf');
+melkMeisje.setPosition(-0.293, -0.05, -2.57);
+melkMeisje.setScale(100, 100, 100);
+melkMeisje.setRotation(0, 45.45, 0);
+
+// create a model
 const cuberoom = new Model('assets/models/cube-room/cube-room.gltf');
 cuberoom.setPosition(0, 0, 0);
 cuberoom.setScale(-.5, 0.5, 0.5);
 cuberoom.setRotation(-0.76, -36.95, 0);
-
 
 // create a primitive (sphere)
 const sphere = new Sphere();
@@ -71,3 +76,5 @@ image4.addEventListener('mouseenter', () =>
 image4.addEventListener('mouseleave', () => 
     document.getElementById('extraText').innerHTML= "");
 
+    melkMeisje.addEventListener('click', () => 
+    document.getElementById('extraText').innerHTML = "Melkmeisje van Vermeer");
