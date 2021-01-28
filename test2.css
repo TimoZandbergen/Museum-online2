@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 2;
     list-style: none;
     text-decoration: none;
     font-family: roboto;
@@ -10,8 +10,8 @@
     width: 100%;
     height: 100px;
     display: block;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,145,111,1) 0%, rgba(0,142,111,1) 0%, rgba(0,142,171,1) 100%);
+    background: rgb(92, 47, 4);
+    background: linear-gradient(90deg, rgb(99, 50, 4) 0%, rgb(99, 50, 4) 0%, rgb(255, 255, 255) 0%, (0,142,171,1) 100%);
 }
 
 .binnen_header {
@@ -38,8 +38,8 @@
 }
 
 body{
-    background: rgb(103,103,103);
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(181, 255, 255) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(255, 240, 244) 0%, rgb(255, 240, 244) 100%);
 }
 
 .nav {
@@ -56,17 +56,17 @@ body{
     cursor: pointer;
 }
 .nav li:hover {
-    background-color: rgb(0, 78, 78);
+    background-color: rgb(210, 210, 210);
 }
 .nav li.active {
-    background-color: rgb(0, 78, 78);
+    background-color: rgb(210, 210, 210);
 }
 
 .nav li a {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     font-family: roboto;
     font-size: 20px;
 }
@@ -79,10 +79,10 @@ body{
 .homecontent{
     width: 96%;
     float: left;
-    background-color: rgb(190, 255, 239);
+    background-color: rgb(92, 47, 4);
     padding: 10px 10px;
     margin: 25px 25px;
-    color: black;
+    color: rgb(255, 249, 249);
     font-weight: 500;
     display: table;
 }
@@ -100,10 +100,10 @@ body{
 .infocontent{
     width: 96%;
     float: left;
-    background-color: rgb(190, 255, 239);
+    background-color: rgb(92, 47, 4);
     padding: 10px 10px;
     margin: 25px 25px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 500;
     display: table;
 }
@@ -111,10 +111,17 @@ body{
 .infocontent li{
     width: 96%;
     float: left;
-    background-color: rgb(190, 255, 239);
+    background-color: rgb(92, 47, 4);
     padding: 10px 10px;
     margin: 25px 25px;
     color: black;
     font-weight: 500;
     display: table;
+}
+
+#img1{
+    width: 40%;
+    height:auto;
+    padding: 10px 440px;
+    
 }
