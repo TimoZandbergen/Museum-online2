@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <link rel="stylesheet" href="test2.css">
-    <title>Document</title>
+    <title>LAM Lisse</title>
 </head>
 <body>
     <div class="header">
@@ -26,25 +26,76 @@
                     dosis aan kunst in je opnemen.
                 </p>
             </div>
-        <h2><p>Welkom bij onze website</p></h2>
-        <h3><p><br>Als jullie hier rechts klikken hebben we verschillende tabs om te klikken waar je of waar onze WebXr word gestuurd of naar info over het LAM museum</p></h3>
-        <h3><p><br>Veel kijk plezier!!!</p></h3>
-        <img id="img1" src="https://i.pinimg.com/originals/db/d7/af/dbd7afc53202c80e35c431bf9bada382.jpg"> 
+            <h2><p>Welkom bij onze website</p></h2>
+            <h3><p><br>Als jullie hier rechts klikken hebben we verschillende tabs om te klikken waar je of waar onze WebXr word gestuurd of naar info over het LAM museum</p></h3>
+            <h3><p><br>Veel kijk plezier!!!</p></h3>
+
+            <div class="slider">
+                <div class="slider-items">
+                    <div  class="item active">
+                       <img src="tilleman_20180609-0340.jpg" />
+                       <div class="caption">
+                          X | O | O
+                       </div>
+                    </div>
+                    <div  class="item">
+                       <img src="Lisse-049.jpg" />
+                       <div class="caption">
+                          O | X | O
+                       </div>
+                    </div>
+                    <div  class="item">
+                       <img src="Lisse-298.jpg" />
+                       <div class="caption">
+                          O | O | X  
+                       </div>
+                    </div>
+          
+                </div>
+                  
+                    <div class="left-slide" id="Lslide"><</div>
+                    <div class="right-slide" id="Rslide">></div>
+            
+             </div>
+        </div>
+
       
 <script>
-    function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    
+
+    var slides=document.querySelector('.slider-items').children;
+    var totalSlides=slides.length;
+    var index=0;
+
+    function next(direction) {
+    if(direction=='next'){
+      index++;
+       if(index==totalSlides){
+        index=0;
+        }
+    } 
+    else{
+           if(index==0){
+            index=totalSlides-1;
+           }
+           else{
+            index--;
+           }
+    }
+
+    for(i=0;i<slides.length;i++){
+          slides[i].classList.remove("active");
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+  slides[index].classList.add("active");   
+    }
+
+    document.getElementById("Lslide").addEventListener("click", function() {
+        next('prev');
+    });
+
+    document.getElementById("Rslide").addEventListener("click", function() {
+        next('next');
+    });
 </script>
 </body>
 </html>
